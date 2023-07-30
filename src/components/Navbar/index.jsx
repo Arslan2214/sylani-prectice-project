@@ -53,7 +53,6 @@ function index() {
                     key={index}
                   >
                     {item.title}
-                    {console.log(index + " : " + item.title)}
                   </Link>
                 );
               })}

@@ -5,6 +5,7 @@ import Products from "./Products";
 import Contact from "./Contact";
 import Navbar from "../../components/Navbar";
 import { Route, Routes } from "react-router-dom";
+// import 'Frontend.scss'
 
 function index() {
   return (
