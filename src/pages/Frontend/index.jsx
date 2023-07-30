@@ -4,6 +4,7 @@ import About from "./About";
 import Products from "./Products";
 import Contact from "./Contact";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import { Route, Routes } from "react-router-dom";
 // import 'Frontend.scss'
 
@@ -24,7 +25,7 @@ function index() {
         />
       </Routes>
       {/* Footer  */}
-      <footer className="bg-dark text-white mt-5 p-3 fs-5 text-center">&copy;{new Date().getFullYear().toString(10)} | All Rights Reserved.</footer>
+      <Footer />
     </>
   );
 }
