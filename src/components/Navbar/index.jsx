@@ -1,14 +1,34 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './index.css'
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Navbar.scss";
 
 function index() {
+  const loc = useLocation();
+  const navObj = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "About",
+      path: "/about",
+    },
+    {
+      title: "Products",
+      path: "/products",
+    },
+    {
+      title: "Contact",
+      path: "/contact",
+    },
+  ];
+
   return (
     <>
       {/* Navbar Start */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container">
-          <Link to='/' className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             Navbar
           </Link>
           <button
@@ -24,18 +44,16 @@ function index() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav ms-auto">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-              <a className="nav-link" href="#">
-                Features
-              </a>
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
+              {navObj.map((item, index) => {
+                <Link
+                  to={item.path}
+                  className={`nav-link ${loc === item.path && "active"}`}
+                  aria-current="page"
+                  key={index}
+                >
+                  {item.title}
+                </Link>;
+              })}
             </div>
           </div>
         </div>
@@ -45,4 +63,4 @@ function index() {
   );
 }
 
-export default index
+export default index;
