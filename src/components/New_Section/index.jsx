@@ -11,7 +11,7 @@ function index({src, text, head, order = null}) {
             }`}
           >
             <h2 className="fs-3 fs-md-2">{head}</h2>
-            <p className="fs-4 text-justify">
+            <p className="fs-5 text-justify">
               {text}
             </p>
           </div>
@@ -19,7 +19,7 @@ function index({src, text, head, order = null}) {
             <img
               src={src}
               alt="product.jpg"
-              className="img-fluid "
+              className="img-fluid shadow"
             />
           </div>
         </div>
