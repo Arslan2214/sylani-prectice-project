@@ -6,7 +6,7 @@ function index({src, text, head, order = null}) {
       <div className="container my-5">
         <div className="row d-flex">
           <div
-            className={`col-12 my-5 col-md-6 d-flex flex-column justify-content-end order-${
+            className={`col-12 my-5 col-md-6 d-flex flex-column justify-content-end order-first order-md-${
               !order ? "first" : order
             }`}
           >
