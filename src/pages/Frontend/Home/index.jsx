@@ -22,6 +22,8 @@ function index() {
         order="last"
         src="https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3QlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
       />
+
+      <hr className="w-50 mt-5 mb-3 mx-auto" />
     </>
   );
 }
