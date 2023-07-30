@@ -26,7 +26,7 @@ function index() {
   return (
     <>
       {/* Navbar Start */}
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
         <div className="container">
           <Link to="/" className="navbar-brand">
             Navbar
@@ -45,15 +45,17 @@ function index() {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav ms-auto">
               {navObj.map((item, index) => {
-                <Link
-                  to={item.path}
-                  className={`nav-link ${loc === item.path && "active"}`}
-                  aria-current="page"
-                  key={index}
-                >
-                  {item.title}
-                  {console.log(index + " : " +item.title)}
-                </Link>;
+                return (
+                  <Link
+                    to={item.path}
+                    className={`nav-link ${loc === item.path && "active"}`}
+                    aria-current="page"
+                    key={index}
+                  >
+                    {item.title}
+                    {console.log(index + " : " + item.title)}
+                  </Link>
+                );
               })}
             </div>
           </div>
